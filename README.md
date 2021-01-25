@@ -3,7 +3,7 @@
 ### _A multi-page website for parents facing the challenges of remote education_
 
 ![Demo](Images/demo.png)  
-Currently deployed at [GitHub Pages](https://dmaysteinman.github.io/Remote-Education-Resource/)
+Currently deployed at [GitHub Pages](https://joeldore.github.io/Remote-Education-Resource/)
 
 ---
 
@@ -19,7 +19,7 @@ Currently deployed at [GitHub Pages](https://dmaysteinman.github.io/Remote-Educa
 
 ---
 
-## Project Collaborators:
+## Collaborators:
 
 [![](https://github.com/dmaysteinman.png?size=64)](https://github.com/dmaysteinman)[![linkedin](Images/linkedin.svg)](http://www.linkedin.com/in/danielle-may-steinman-2868781b4)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,11 +50,11 @@ Currently deployed at [GitHub Pages](https://dmaysteinman.github.io/Remote-Educa
 
 <div align="center">
 
-<img src='https://img.shields.io/github/repo-size/dmaysteinman/Remote-Education-Resource'>  
-<img src='https://img.shields.io/github/last-commit/dmaysteinman/Remote-Education-Resource'>
-<img src='https://img.shields.io/github/languages/top/dmaysteinman/Remote-Education-Resource'>
+<img src='https://img.shields.io/github/repo-size/joeldore/Remote-Education-Resource'>  
+<img src='https://img.shields.io/github/last-commit/joeldore/Remote-Education-Resource'>
+<img src='https://img.shields.io/github/languages/top/joeldore/Remote-Education-Resource'>
 
-This project is [MIT](https://github.com/dmaysteinman/Remote-Education-Resource/blob/main/LICENSE) licensed  
+This project is [MIT](https://github.com/joeldore/Remote-Education-Resource/blob/main/LICENSE) licensed  
 © 2020 _StopBooleanMe_
 
 </div>
