@@ -16,47 +16,73 @@ $(document).ready(() => {
     // Search Button onclick event
     $("#search-button-state").click(() => {
 
-        const stateSelect = $("#state-select option:selected").text();
+        // Validate ZIP
         const zipInput = $("#search-zip").val();
-       
+        if (isNaN(zipInput) || zipInput.length !== 5) {
+            resultsDiv.html("Please enter a valid 5-digit zip code")
+            return
+        }
+
+        const stateSelect = $("#state-select option:selected").text();
         const queryURL =
             `https://educationdata.urban.org/api/v1/schools/ccd/directory/2018/?state_location=${stateSelect}`
+
+        showSpinner()
 
         $.ajax({
             url: queryURL,
             method: "GET",
-        }).then(function (response) {
-            // Clear resultsDiv
+        }).then(({ results }) => {
             resultsDiv.html('')
-            // ERROR message
-            if (isNaN(zipInput) || zipInput.length > 5) {
-                resultsDiv.text("ERROR: Please enter a 5 digit zip code")
+
+            const schools = results.filter(school => school.zip_location === zipInput || school.zip_mailing === zipInput)
+
+            if (schools.length === 0) {
+                resultsDiv.html(`
+                <div class='card m-3 bg-light'>
+                    <div class='card-body'>
+                        <h3>No results found</h3>
+                        <p>Please enter a valid 5-digit zip code or try a new one</p>
+                    </div>
+                </div>
+                `)
                 return
             }
-            
-            let results = response.results;
-            for (let i = 0; i < results.length; i++) {
-                const zipLocation = results[i].zip_location;
-                const zipMailing = results[i].zip_mailing;
+            schools.forEach(school => {
+                const schoolName = school.school_name;
+                const phoneNumber = school.phone;
+                const enrollment = school.enrollment;
+                const card = `
+                <div class='card m-3 bg-light'>
+                    <div class='card-body'>
+                        <b>School Name:</b> ${schoolName} <br>
+                        <b>Phone:</b> ${phoneNumber} <br> 
+                        <b>Enrollment:</b> ${enrollment} students
+                    </div>
+                </div>
+                `
+                resultsDiv.append(card)
+            })
 
-                if (zipInput === zipLocation || zipInput === zipMailing) {
-                    const schoolName = results[i].school_name;
-                    const phoneNumber = results[i].phone;
-                    const enrollment = results[i].enrollment;
-                    // APPEND data to results div
-                    resultsDiv.append(`<div class='card m-3 bg-light'><div class='card-body'><b>School Name:</b> ${schoolName} <br> <b>Phone:</b> ${phoneNumber} <br> <b>Enrollment:</b> ${enrollment} students</div></div>`)
-                }
-            }
-        
-
-        if (zipHistoryArray.includes(zipInput)) {
-            let rptIndex = zipHistoryArray.indexOf(zipInput);
-            zipHistoryArray.splice(rptIndex, 1);
-        };
-        zipHistoryArray.unshift(zipInput);
-        updateHistory();
-    });
+            if (zipHistoryArray.includes(zipInput)) {
+                let rptIndex = zipHistoryArray.indexOf(zipInput);
+                zipHistoryArray.splice(rptIndex, 1);
+            };
+            zipHistoryArray.unshift(zipInput);
+            updateHistory();
+        })
     })
+
+    function showSpinner() {
+        const spinner = `
+            <div id="data-results" class="text-center">
+                <div class="spinner-border m-5" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            `
+        resultsDiv.html(spinner)
+    }
 
     function updateHistory() {
         localStorage.setItem("zipHistory", JSON.stringify(zipHistoryArray));
