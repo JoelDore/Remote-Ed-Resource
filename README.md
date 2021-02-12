@@ -1,9 +1,9 @@
-# Remote Education Resource
+# Remote Ed Resource
 
 ### _A multi-page website for parents facing the challenges of remote education_
 
 ![Demo](Images/demo.png)  
-Currently deployed at [GitHub Pages](https://joeldore.github.io/Remote-Education-Resource/)
+Currently deployed at [GitHub Pages](https://joeldore.github.io/Remote-Ed-Resource/)
 
 ---
 
@@ -23,7 +23,7 @@ Currently deployed at [GitHub Pages](https://joeldore.github.io/Remote-Education
 
 [![](https://github.com/dmaysteinman.png?size=64)](https://github.com/dmaysteinman)[![linkedin](Images/linkedin.svg)](http://www.linkedin.com/in/danielle-may-steinman-2868781b4)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQHTbPrJQ5US1w/profile-displayphoto-shrink_400_400/0?e=1609372800&v=beta&t=UEVpFtEsO78Zr9T9GlUdGmfh9jhzryxTeuREVVkB8x4" width="64">](https://github.com/mrjacoughlin)[![linkedin](Images/linkedin.svg)](http://www.linkedin.com/in/james-coughlin-428a1747)  
+[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQHTbPrJQ5US1w/profile-displayphoto-shrink_800_800/0/1574389808029?e=1618444800&v=beta&t=EIEst-se3ya96slF0xv7Jefu19UONz-075bkZ6EWfRU" width="64">](https://github.com/mrjacoughlin)[![linkedin](Images/linkedin.svg)](http://www.linkedin.com/in/james-coughlin-428a1747)  
 
 [![](https://github.com/JGilb28-7.png?size=64)](https://github.com/JGilb28-7)[![linkedin](Images/linkedin.svg)](http://www.linkedin.com/in/jonathan-gilbert-67600211)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,11 +50,11 @@ Currently deployed at [GitHub Pages](https://joeldore.github.io/Remote-Education
 
 <div align="center">
 
-<img src='https://img.shields.io/github/repo-size/joeldore/Remote-Education-Resource'>  
-<img src='https://img.shields.io/github/last-commit/joeldore/Remote-Education-Resource'>
-<img src='https://img.shields.io/github/languages/top/joeldore/Remote-Education-Resource'>
+<img src='https://img.shields.io/github/repo-size/joeldore/Remote-Ed-Resource'>  
+<img src='https://img.shields.io/github/last-commit/joeldore/Remote-Ed-Resource'>
+<img src='https://img.shields.io/github/languages/top/joeldore/Remote-Ed-Resource'>
 
-This project is [MIT](https://github.com/joeldore/Remote-Education-Resource/blob/main/LICENSE) licensed  
+This project is [MIT](https://github.com/joeldore/Remote-Ed-Resource/blob/main/LICENSE) licensed  
 © 2020 _StopBooleanMe_
 
 </div>
